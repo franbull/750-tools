@@ -36,7 +36,7 @@ def get_data():
         break
     # the server is 8 hours ahead, hack around
     td = timedelta(hours=8)
-    new_dates = [d - td for d in dates]
+    new_dates = sorted([d - td for d in dates])
     return new_dates
 
 def write_content(content):
